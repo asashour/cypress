@@ -61,7 +61,7 @@ describe('e2e proxy correlation spec', () => {
   systemTests.it('correctly correlates requests', {
     spec: 'proxy_correlation.cy.js',
     processEnv: {
-      DEBUG: 'cypress:proxy:http:util:prerequests',
+      DEBUG: 'cypress:proxy:http:util:prerequests,cypress-verbose:proxy:http:util:prerequests,cypress:server:browsers:bidi_automation,cypress-verbose:server:browsers:bidi_automation',
     },
     config: {
       experimentalWebKitSupport: true,

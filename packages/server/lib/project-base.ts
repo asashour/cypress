@@ -643,7 +643,7 @@ export class ProjectBase extends EE {
       // If we're not in chromium, our strategy for correlating service worker prerequests doesn't work in non-chromium browsers (https://github.com/cypress-io/cypress/issues/28079)
       // in order to not hang for 2 seconds, we override the prerequest timeout to be 500 ms (which is what it has been historically).
       // For Firefox, we override the prerequest timeout to be 1000 ms since Webdriver BiDi takes a little longer to send the prerequest event through.
-      this.browser.family === 'firefox' ? this._server?.setPreRequestTimeout(1000) : this._server?.setPreRequestTimeout(500)
+      this.browser.family === 'firefox' ? this._server?.setPreRequestTimeout(500) : this._server?.setPreRequestTimeout(500)
     }
   }
 
